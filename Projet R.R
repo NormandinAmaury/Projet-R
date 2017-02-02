@@ -72,7 +72,7 @@ splom(sample, col=c(5,6,9,10)[Cluster$cluster])
 
 
 #Exercice 3
-test = beers[,c(4,7,11)]
+test = beers[,c(4,5,6,9,10,11)]
 
 affinity.data<-read.csv("beer_reviews.csv")
 
@@ -82,5 +82,14 @@ affinity.matrix<- as(affinity.data,"realRatingMatrix")
 Rec.model<-Recommender(affinity.matrix, method = "UBCF")
 recommended.items.1 <- predict(Rec.model, affinity.matrix["1",], n=5)
 as(recommended.items.1, "list")
+
+
+
+
+
+
+
+affinity.data<-affinity.data[,c(4,11)]
+
 
 
