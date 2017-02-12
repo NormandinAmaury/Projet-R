@@ -14,7 +14,6 @@ length(unique(beers$beer_beerid))
 summary(beers)
 beers[, length(unique(beer_beerid)), by= "review_profilename"]
 beers[review_overall<5]
-beers[,review_overall]
 head(beers[,review_overall],n=10)
 
 
@@ -55,17 +54,14 @@ sample = mysample[,c(5,6,9,10)]
 sample = data.frame(lapply(sample, jitter))
 
 Cluster = kmeans(sample, 5)
-Cluster$centers
-Cluster$cluster
+#Cluster$centers
+#Cluster$cluster
 
 plotcluster(sample, Cluster$cluster)
 clusplot(sample, Cluster$cluster, color=TRUE, shade=TRUE, lines=0)
 
 
-#plot(jitter(Cluster$cluster,factor=4))
 
-
-#jitter(2, factor = 1, amount = NULL)
 pairs(sample, col=c(5,6,9,10)[Cluster$cluster])
 splom(sample, col=c(5,6,9,10)[Cluster$cluster])
 
@@ -74,22 +70,17 @@ splom(sample, col=c(5,6,9,10)[Cluster$cluster])
 #Exercice 3
 test = beers[,c(4,5,6,9,10,11)]
 
-affinity.data<-read.csv("beer_reviews.csv")
+affinity.data=read.csv("beer_reviews.csv")
 
-affinity.data<-affinity.data[,c(4,11)]
+affinity.data=affinity.data[,c(4,11)]
 
-affinity.matrix<- as(affinity.data,"realRatingMatrix")
-Rec.model<-Recommender(affinity.matrix, method = "UBCF")
-recommended.items.1 <- predict(Rec.model, affinity.matrix["1",], n=5)
+affinity.matrix= as(affinity.data,"realRatingMatrix")
+Rec.model=Recommender(affinity.matrix, method = "UBCF")
+recommended.items.1 = predict(Rec.model, affinity.matrix["1",], n=5)
 as(recommended.items.1, "list")
 
 
 
-
-
-
-
-affinity.data<-affinity.data[,c(4,11)]
 
 
 
