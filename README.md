@@ -28,7 +28,7 @@ With the use of the database from beer enthusiasts that need to be download firs
 
 
 
-#Text Mining et sentiment analysis.
+#Text Mining and sentiment analysis.
 
 
 ##Content of the Project 
