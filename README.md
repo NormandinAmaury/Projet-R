@@ -6,8 +6,8 @@ With the use of the database from beer enthusiasts that need to be download firs
 
 ##Content of the Project 
 
-The project in R language.
-The results in HTML form.
+-The project in R language.
+-The results in HTML form.
 
 
 ##Informations:
