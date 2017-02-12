@@ -47,7 +47,7 @@ With the use of the database from beer enthusiasts that need to be download firs
 
 
 
-##Informations:
+##Information:
 
 Unfortunately following an issue with the first project on GitHub we have lost all of our first commits.
 We hope that this will not be an issue.
